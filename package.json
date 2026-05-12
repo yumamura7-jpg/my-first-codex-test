@@ -1,0 +1,17 @@
+{
+  "name": "my-first-codex-test",
+  "version": "1.0.0",
+  "description": "60-second character explainer video asset for a Supple Hack article.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node scripts/validate-html.mjs"
+  },
+  "keywords": [
+    "video",
+    "html",
+    "japanese"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
