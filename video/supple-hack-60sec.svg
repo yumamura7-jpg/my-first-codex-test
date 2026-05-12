@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">60秒動画プレビュー｜減量期サプリ3選</title>
+  <desc id="desc">サプリくんがクレアチン、リンゴ酸マグネシウム、ビタミンB群を60秒で紹介するアニメーションプレビュー</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#123c69"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="20%" cy="12%" r="42%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="82%" cy="20%" r="36%">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <style><![CDATA[
+      :root { --duration: 60s; }
+      .jp { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif; }
+      .brand { font-size: 28px; font-weight: 800; fill: #f8fafc; letter-spacing: 1px; }
+      .source { font-size: 17px; fill: #cbd5e1; }
+      .eyebrow { font-size: 25px; font-weight: 900; fill: #bae6fd; }
+      .headline { font-size: 61px; font-weight: 900; fill: #f8fafc; }
+      .body { font-size: 33px; font-weight: 750; fill: #e2e8f0; }
+      .accent { fill: #fbbf24; }
+      .cyan { fill: #7dd3fc; }
+      .green { fill: #86efac; }
+      .pink { fill: #fda4af; }
+      .scene { opacity: 0; }
+      .s1 { animation: s1 60s linear infinite; }
+      .s2 { animation: s2 60s linear infinite; }
+      .s3 { animation: s3 60s linear infinite; }
+      .s4 { animation: s4 60s linear infinite; }
+      .s5 { animation: s5 60s linear infinite; }
+      .s6 { animation: s6 60s linear infinite; }
+      .s7 { animation: s7 60s linear infinite; }
+      .s8 { animation: s8 60s linear infinite; }
+      @keyframes s1 { 0%,9%{opacity:1;transform:translateY(0)} 10.2%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s2 { 0%,9.8%{opacity:0;transform:translateY(24px)} 11%,22.2%{opacity:1;transform:translateY(0)} 23.4%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s3 { 0%,23.1%{opacity:0;transform:translateY(24px)} 24.3%,35.5%{opacity:1;transform:translateY(0)} 36.7%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s4 { 0%,36.4%{opacity:0;transform:translateY(24px)} 37.6%,48.8%{opacity:1;transform:translateY(0)} 50%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s5 { 0%,49.7%{opacity:0;transform:translateY(24px)} 50.9%,62.1%{opacity:1;transform:translateY(0)} 63.3%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s6 { 0%,63%{opacity:0;transform:translateY(24px)} 64.2%,78.8%{opacity:1;transform:translateY(0)} 80%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s7 { 0%,79.7%{opacity:0;transform:translateY(24px)} 80.9%,90.5%{opacity:1;transform:translateY(0)} 91.7%,100%{opacity:0;transform:translateY(-20px)} }
+      @keyframes s8 { 0%,91.4%{opacity:0;transform:translateY(24px)} 92.6%,100%{opacity:1;transform:translateY(0)} }
+      .bob { animation: bob 2.2s ease-in-out infinite; transform-origin: 190px 515px; }
+      .wave { animation: wave 1.1s ease-in-out infinite alternate; transform-origin: 282px 360px; }
+      .progress { animation: progress 60s linear infinite; transform-origin: 0 0; }
+      .pill1 { animation: float 8s ease-in-out infinite; }
+      .pill2 { animation: float 8s ease-in-out infinite -2s; }
+      .pill3 { animation: float 8s ease-in-out infinite -4s; }
+      @keyframes bob { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-14px) rotate(2deg)} }
+      @keyframes wave { from{transform:rotate(-5deg)} to{transform:rotate(14deg)} }
+      @keyframes progress { from{transform:scaleX(0)} to{transform:scaleX(1)} }
+      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-22px)} }
+    ]]></style>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow1)"/>
+  <rect width="1280" height="720" fill="url(#glow2)"/>
+  <g opacity="0.14" stroke="#ffffff" stroke-width="1">
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280M0 640H1280"/>
+    <path d="M80 0V720M160 0V720M240 0V720M320 0V720M400 0V720M480 0V720M560 0V720M640 0V720M720 0V720M800 0V720M880 0V720M960 0V720M1040 0V720M1120 0V720M1200 0V720"/>
+  </g>
+
+  <rect x="47" y="29" width="310" height="52" rx="26" fill="#0f172a" opacity="0.58" stroke="#ffffff" stroke-opacity="0.22"/>
+  <text class="jp brand" x="74" y="64">サプリハック｜60秒まとめ</text>
+  <text class="jp source" x="1010" y="48">Source: supple-hack.com/?p=5</text>
+  <text class="jp source" x="1080" y="72">Character: サプリくん</text>
+
+  <g class="pill1" opacity="0.32"><rect x="1088" y="116" width="140" height="38" rx="19" fill="#34d399" transform="rotate(18 1158 135)"/></g>
+  <g class="pill2" opacity="0.32"><rect x="1034" y="572" width="120" height="33" rx="16.5" fill="#fb7185" transform="rotate(-28 1094 588)"/></g>
+  <g class="pill3" opacity="0.32"><rect x="295" y="88" width="95" height="29" rx="14.5" fill="#fbbf24" transform="rotate(42 342 102)"/></g>
+
+  <g class="bob">
+    <ellipse cx="190" cy="640" rx="76" ry="16" fill="#000000" opacity="0.22"/>
+    <g class="wave">
+      <path d="M260 395 C312 370 341 330 345 282" fill="none" stroke="#f8fafc" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="347" cy="274" r="17" fill="#f8fafc"/>
+    </g>
+    <path d="M110 405 C65 413 46 450 53 492" fill="none" stroke="#f8fafc" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="56" cy="500" r="16" fill="#f8fafc"/>
+    <rect x="100" y="270" width="180" height="278" rx="90" fill="#f8fafc"/>
+    <path d="M100 410 h180 v48 c0 50-40 90-90 90s-90-40-90-90z" fill="#34d399"/>
+    <path d="M100 360 h180 v58 h-180z" fill="#38bdf8" opacity="0.88"/>
+    <circle cx="154" cy="358" r="15" fill="#0f172a"/>
+    <circle cx="226" cy="358" r="15" fill="#0f172a"/>
+    <circle cx="158" cy="353" r="5" fill="#ffffff"/>
+    <circle cx="231" cy="353" r="5" fill="#ffffff"/>
+    <path d="M154 430 C174 451 207 451 226 430" fill="none" stroke="#0f172a" stroke-width="11" stroke-linecap="round"/>
+    <path d="M132 300 C175 267 238 272 270 310" fill="none" stroke="#fbbf24" stroke-width="13" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M58 164 h310 q24 0 24 24 v96 q0 24-24 24 h-260 l-50 42 v-42 q-24 0-24-24 v-96 q0-24 24-24z" fill="#f8fafc" opacity="0.96"/>
+    <text class="jp" x="72" y="207" font-size="28" font-weight="900" fill="#0f172a">減量期は</text>
+    <text class="jp" x="72" y="247" font-size="28" font-weight="900" fill="#0f172a">“筋力を残す土台”を</text>
+    <text class="jp" x="72" y="287" font-size="28" font-weight="900" fill="#0f172a">先に作ろう！</text>
+  </g>
+
+  <g transform="translate(430 145)">
+    <g class="scene s1">
+      <text class="jp eyebrow" x="0" y="0">0〜6秒：結論</text>
+      <text class="jp headline" x="0" y="88">179cm / 75kgの減量期は</text>
+      <text class="jp headline accent" x="0" y="166">3つのサプリで守る</text>
+      <text class="jp body" x="0" y="235">カロリーを削るほど、筋力・回復・代謝の土台が大事。</text>
+    </g>
+    <g class="scene s2">
+      <text class="jp eyebrow" x="0" y="0">6〜14秒：なぜ必要？</text>
+      <text class="jp headline" x="0" y="88">減量期の落とし穴は</text>
+      <text class="jp headline pink" x="0" y="166">体重だけでなく出力も落ちること</text>
+      <text class="jp body" x="0" y="235">最後の1〜2レップ、翌朝の回復感、集中力が落ちやすい。</text>
+    </g>
+    <g class="scene s3">
+      <text class="jp eyebrow" x="0" y="0">14〜22秒：サプリ①</text>
+      <text class="jp headline cyan" x="0" y="88">クレアチン</text>
+      <text class="jp headline" x="0" y="166">重量を落としにくくする相棒</text>
+      <text class="jp body" x="0" y="235">ATP再合成をサポート。毎日3〜5gを継続。</text>
+    </g>
+    <g class="scene s4">
+      <text class="jp eyebrow" x="0" y="0">22〜30秒：サプリ②</text>
+      <text class="jp headline green" x="0" y="88">リンゴ酸マグネシウム</text>
+      <text class="jp headline" x="0" y="166">筋肉と神経を整える</text>
+      <text class="jp body" x="0" y="235">翌朝の重さ、こわばり、だるさが気になる人に。</text>
+    </g>
+    <g class="scene s5">
+      <text class="jp eyebrow" x="0" y="0">30〜38秒：サプリ③</text>
+      <text class="jp headline accent" x="0" y="88">ビタミンB群</text>
+      <text class="jp headline" x="0" y="166">代謝の着火剤</text>
+      <text class="jp body" x="0" y="235">糖質・脂質・タンパク質をエネルギーへ。</text>
+    </g>
+    <g class="scene s6">
+      <text class="jp eyebrow" x="0" y="0">38〜48秒：役割を一瞬で整理</text>
+      <rect x="0" y="50" width="225" height="170" rx="28" fill="#ffffff" opacity="0.13" stroke="#ffffff" stroke-opacity="0.24"/>
+      <rect x="250" y="50" width="225" height="170" rx="28" fill="#ffffff" opacity="0.13" stroke="#ffffff" stroke-opacity="0.24"/>
+      <rect x="500" y="50" width="225" height="170" rx="28" fill="#ffffff" opacity="0.13" stroke="#ffffff" stroke-opacity="0.24"/>
+      <text x="88" y="112" font-size="54">🏋️</text><text class="jp body" x="40" y="158">クレアチン</text><text class="jp body cyan" x="80" y="202">粘り</text>
+      <text x="338" y="112" font-size="54">😴</text><text class="jp body" x="276" y="158">マグネシウム</text><text class="jp body green" x="320" y="202">回復感</text>
+      <text x="588" y="112" font-size="54">🔥</text><text class="jp body" x="548" y="158">ビタミンB</text><text class="jp body accent" x="580" y="202">代謝</text>
+    </g>
+    <g class="scene s7">
+      <text class="jp eyebrow" x="0" y="0">48〜55秒：ルーティン</text>
+      <rect x="0" y="52" width="710" height="58" rx="29" fill="#0f172a" opacity="0.62" stroke="#ffffff" stroke-opacity="0.18"/>
+      <rect x="0" y="132" width="710" height="58" rx="29" fill="#0f172a" opacity="0.62" stroke="#ffffff" stroke-opacity="0.18"/>
+      <rect x="0" y="212" width="710" height="58" rx="29" fill="#0f172a" opacity="0.62" stroke="#ffffff" stroke-opacity="0.18"/>
+      <circle cx="36" cy="81" r="24" fill="#fbbf24"/><text class="jp" x="20" y="91" font-size="25" font-weight="900" fill="#111827">朝</text><text class="jp body" x="78" y="92">ビタミンB群 + マグネシウム</text>
+      <circle cx="36" cy="161" r="24" fill="#fbbf24"/><text class="jp" x="20" y="171" font-size="25" font-weight="900" fill="#111827">後</text><text class="jp body" x="78" y="172">トレ後にクレアチン3〜5g</text>
+      <circle cx="36" cy="241" r="24" fill="#fbbf24"/><text class="jp" x="20" y="251" font-size="25" font-weight="900" fill="#111827">夜</text><text class="jp body" x="78" y="252">夕食後にマグネシウム</text>
+    </g>
+    <g class="scene s8">
+      <text class="jp eyebrow" x="0" y="0">55〜60秒：まとめ</text>
+      <text class="jp headline" x="0" y="88">気合いだけで絞らない。</text>
+      <text class="jp headline accent" x="0" y="166">先に土台を揃えよう。</text>
+      <text class="jp body" x="0" y="235">クレアチン、リンゴ酸マグネシウム、ビタミンB群。</text>
+    </g>
+  </g>
+
+  <text class="jp" x="47" y="684" font-size="16" fill="#f8fafc" opacity="0.72">※健康状態・服薬・検査予定がある場合は医師や薬剤師に確認してください。サプリは食事・睡眠・トレーニングを置き換えるものではありません。</text>
+  <rect x="0" y="710" width="1280" height="10" fill="#ffffff" opacity="0.16"/>
+  <rect class="progress" x="0" y="710" width="1280" height="10" fill="#34d399"/>
+</svg>
