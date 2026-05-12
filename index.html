@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>スーパーマラドーナの大都会東京ライブ</title>
+  <style>
+    :root {
+      --ink: #080616;
+      --night: #121025;
+      --purple: #6d21ff;
+      --pink: #ff2aa3;
+      --cyan: #24f4ff;
+      --lime: #d7ff45;
+      --gold: #ffd36a;
+      --paper: #fff7df;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255, 42, 163, .34), transparent 28rem),
+        radial-gradient(circle at 85% 14%, rgba(36, 244, 255, .25), transparent 27rem),
+        linear-gradient(135deg, #05030d 0%, #15102e 48%, #02040b 100%);
+      color: var(--paper);
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+      padding: 28px;
+    }
+
+    .flyer {
+      position: relative;
+      width: min(100%, 860px);
+      min-height: 1216px;
+      overflow: hidden;
+      border-radius: 34px;
+      isolation: isolate;
+      background:
+        linear-gradient(152deg, rgba(255,255,255,.12), transparent 22%),
+        radial-gradient(circle at 52% 40%, rgba(255, 211, 106, .28), transparent 10rem),
+        radial-gradient(circle at 36% 53%, rgba(255, 42, 163, .34), transparent 20rem),
+        radial-gradient(circle at 78% 44%, rgba(36, 244, 255, .22), transparent 18rem),
+        #090817;
+      box-shadow: 0 42px 120px rgba(0, 0, 0, .56), inset 0 0 0 1px rgba(255,255,255,.22);
+    }
+
+    .flyer::before {
+      content: "";
+      position: absolute;
+      inset: -12%;
+      z-index: -2;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 1px, transparent 1px 84px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 84px);
+      transform: rotate(-8deg) scale(1.08);
+      mask-image: radial-gradient(ellipse at center, black 0 58%, transparent 76%);
+    }
+
+    .flyer::after {
+      content: "TOKYO LIVE TOKYO LIVE TOKYO LIVE";
+      position: absolute;
+      left: -120px;
+      top: 310px;
+      z-index: -1;
+      color: rgba(255, 255, 255, .035);
+      font-size: 120px;
+      font-weight: 1000;
+      letter-spacing: .08em;
+      white-space: nowrap;
+      transform: rotate(-16deg);
+    }
+
+    .beam {
+      position: absolute;
+      inset: auto;
+      width: 280px;
+      height: 780px;
+      top: -140px;
+      background: linear-gradient(to bottom, rgba(255, 211, 106, .5), transparent 70%);
+      filter: blur(2px);
+      mix-blend-mode: screen;
+      clip-path: polygon(44% 0, 56% 0, 100% 100%, 0 100%);
+      opacity: .74;
+    }
+
+    .beam.left { left: -56px; transform: rotate(-18deg); }
+    .beam.right { right: -38px; transform: rotate(16deg); }
+
+    .burst {
+      position: absolute;
+      width: 560px;
+      aspect-ratio: 1;
+      right: -205px;
+      top: 120px;
+      background: conic-gradient(from 4deg, var(--pink), var(--gold), var(--cyan), var(--purple), var(--pink));
+      clip-path: polygon(50% 0, 56% 36%, 86% 15%, 64% 44%, 100% 50%, 64% 56%, 86% 85%, 56% 64%, 50% 100%, 44% 64%, 14% 85%, 36% 56%, 0 50%, 36% 44%, 14% 15%, 44% 36%);
+      filter: blur(.2px) drop-shadow(0 0 34px rgba(255,42,163,.42));
+      opacity: .88;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      padding: 54px 56px 40px;
+    }
+
+    .eyebrow {
+      display: inline-grid;
+      grid-auto-flow: column;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      color: var(--ink);
+      background: var(--lime);
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      transform: rotate(-2deg);
+      box-shadow: 6px 8px 0 var(--pink);
+    }
+
+    .title {
+      margin: 34px 0 0;
+      display: grid;
+      gap: 6px;
+      line-height: .88;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-weight: 900;
+      letter-spacing: -.07em;
+      text-shadow: 0 0 22px rgba(255, 211, 106, .42);
+    }
+
+    .title .small {
+      color: var(--cyan);
+      font-size: clamp(42px, 8vw, 76px);
+      -webkit-text-stroke: 1px rgba(255,255,255,.36);
+    }
+
+    .title .main {
+      width: max-content;
+      max-width: 100%;
+      color: transparent;
+      font-size: clamp(70px, 14vw, 138px);
+      background: linear-gradient(96deg, #fff5b6 0%, var(--gold) 28%, #fff 48%, var(--pink) 72%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: drop-shadow(0 10px 0 rgba(0,0,0,.5));
+    }
+
+    .title .tokyo {
+      color: var(--paper);
+      font-size: clamp(54px, 10vw, 96px);
+      letter-spacing: -.04em;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      align-items: end;
+      margin-top: 26px;
+    }
+
+    .duo-card {
+      position: relative;
+      min-height: 380px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 28px;
+      padding: 30px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.03)),
+        radial-gradient(circle at 30% 20%, rgba(255, 211, 106, .18), transparent 18rem);
+      box-shadow: inset 0 0 60px rgba(255,255,255,.04), 0 24px 70px rgba(0,0,0,.32);
+      overflow: hidden;
+    }
+
+    .duo-card::before,
+    .duo-card::after {
+      content: "";
+      position: absolute;
+      bottom: 84px;
+      width: 156px;
+      height: 196px;
+      border-radius: 46% 46% 22% 22%;
+      background: linear-gradient(180deg, #1b214a, #050713 74%);
+      filter: drop-shadow(0 14px 20px rgba(0,0,0,.45));
+    }
+
+    .duo-card::before { left: 78px; transform: rotate(-5deg); }
+    .duo-card::after { right: 78px; transform: rotate(4deg); background: linear-gradient(180deg, #171717, #050505 76%); }
+
+    .face {
+      position: absolute;
+      bottom: 240px;
+      width: 116px;
+      aspect-ratio: 1;
+      border-radius: 50% 50% 46% 46%;
+      background: linear-gradient(180deg, #ffe0bd, #c9825d);
+      box-shadow: inset 0 -18px 18px rgba(52, 17, 10, .18);
+    }
+
+    .face.one { left: 98px; }
+    .face.two { right: 98px; }
+
+    .face::before {
+      content: "";
+      position: absolute;
+      inset: -14px 12px auto;
+      height: 38px;
+      border-radius: 46% 54% 28% 24%;
+      background: #090909;
+    }
+
+    .glasses {
+      position: absolute;
+      left: 16px;
+      top: 47px;
+      width: 84px;
+      height: 18px;
+      border-top: 5px solid #050505;
+    }
+
+    .glasses::before,
+    .glasses::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      width: 28px;
+      height: 18px;
+      border: 4px solid #050505;
+      border-radius: 10px;
+    }
+
+    .glasses::before { left: 0; }
+    .glasses::after { right: 0; }
+
+    .nameplate {
+      position: absolute;
+      inset: auto 24px 24px;
+      display: grid;
+      gap: 5px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      color: var(--ink);
+      background: linear-gradient(90deg, var(--gold), #fff2a9 52%, var(--lime));
+      transform: rotate(-1deg);
+      box-shadow: 8px 10px 0 rgba(255, 42, 163, .72);
+    }
+
+    .nameplate strong {
+      font-size: 34px;
+      font-family: "Hiragino Mincho ProN", serif;
+      line-height: 1;
+    }
+
+    .nameplate span { font-weight: 900; letter-spacing: .12em; }
+
+    .date-card {
+      align-self: stretch;
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      padding: 34px;
+      border-radius: 28px;
+      background: rgba(255, 42, 163, .14);
+      border: 2px solid rgba(36, 244, 255, .72);
+      box-shadow: 0 0 38px rgba(36,244,255,.2), inset 0 0 38px rgba(36,244,255,.09);
+    }
+
+    .date-card .month {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      color: var(--cyan);
+      font-weight: 1000;
+    }
+
+    .date-card .month b { font-size: 96px; line-height: .8; }
+    .date-card .month span { font-size: 38px; }
+
+    .time {
+      padding: 14px 18px;
+      border-radius: 16px;
+      color: var(--ink);
+      background: var(--paper);
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.45;
+      box-shadow: 8px 8px 0 var(--purple);
+    }
+
+    .venue {
+      color: var(--gold);
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .section-title {
+      width: fit-content;
+      margin: 36px auto 18px;
+      padding: 10px 30px;
+      color: var(--ink);
+      background: var(--cyan);
+      border-radius: 999px;
+      font-weight: 1000;
+      letter-spacing: .25em;
+      box-shadow: -8px 8px 0 var(--pink);
+    }
+
+    .guests {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .guest {
+      position: relative;
+      min-height: 176px;
+      overflow: hidden;
+      border-radius: 24px;
+      padding: 22px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,.03)),
+        var(--night);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    .guest::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      right: -24px;
+      bottom: -38px;
+      border-radius: 45% 55% 18% 18%;
+      background: linear-gradient(180deg, var(--gold), #7b3e1f);
+      transform: rotate(9deg);
+      opacity: .92;
+    }
+
+    .guest:nth-child(2)::after { background: linear-gradient(180deg, #ff9b2f, var(--pink)); width: 206px; }
+
+    .guest h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 10px;
+      font-family: "Hiragino Mincho ProN", serif;
+      font-size: 34px;
+      color: var(--gold);
+    }
+
+    .guest p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 62%;
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .info-card {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    .info-card.full { grid-column: 1 / -1; }
+    .label { color: var(--cyan); font-weight: 1000; letter-spacing: .18em; font-size: 14px; }
+    .value { margin-top: 8px; font-size: 24px; font-weight: 900; line-height: 1.35; }
+    .price { color: var(--lime); font-size: 34px; }
+
+    .ticket-strip {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr .8fr;
+      gap: 12px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 16px;
+      color: #080808;
+      background: var(--paper);
+      border-radius: 20px;
+      font-weight: 900;
+    }
+
+    .ticket-logo {
+      font-size: 26px;
+      letter-spacing: -.04em;
+    }
+
+    .qr {
+      justify-self: end;
+      width: 72px;
+      aspect-ratio: 1;
+      background:
+        linear-gradient(90deg, #000 50%, transparent 0) 0 0/14px 14px,
+        linear-gradient(#000 50%, transparent 0) 0 0/14px 14px,
+        #fff;
+      border: 8px solid #fff;
+      box-shadow: inset 0 0 0 3px #000;
+    }
+
+    .diagonal {
+      position: absolute;
+      left: -28px;
+      bottom: 170px;
+      padding: 12px 42px;
+      color: var(--ink);
+      background: var(--pink);
+      font-weight: 1000;
+      letter-spacing: .16em;
+      transform: rotate(8deg);
+      box-shadow: 8px 8px 0 var(--cyan);
+    }
+
+    @media (max-width: 760px) {
+      body { padding: 12px; }
+      .flyer { min-height: auto; border-radius: 22px; }
+      .content { padding: 34px 22px 28px; }
+      .hero, .guests, .info, .ticket-strip { grid-template-columns: 1fr; }
+      .duo-card { min-height: 340px; }
+      .duo-card::before { left: 42px; }
+      .duo-card::after { right: 42px; }
+      .face.one { left: 62px; }
+      .face.two { right: 62px; }
+      .date-card .month b { font-size: 78px; }
+      .ticket-strip .qr { justify-self: start; }
+      .diagonal { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="flyer" aria-label="スーパーマラドーナの大都会東京ライブ フライヤー">
+    <div class="beam left"></div>
+    <div class="beam right"></div>
+    <div class="burst" aria-hidden="true"></div>
+    <div class="diagonal">漫才×大都会×ネオン</div>
+
+    <section class="content">
+      <div class="eyebrow">一夜限りの東京スペシャル</div>
+
+      <h1 class="title">
+        <span class="small">スーパーマラドーナの</span>
+        <span class="main">大都会</span>
+        <span class="tokyo">東京ライブ</span>
+      </h1>
+
+      <section class="hero" aria-label="出演者と公演日時">
+        <div class="duo-card">
+          <div class="face one"><span class="glasses"></span></div>
+          <div class="face two"></div>
+          <div class="nameplate">
+            <span>MAIN ACT</span>
+            <strong>スーパーマラドーナ</strong>
+          </div>
+        </div>
+
+        <aside class="date-card">
+          <div class="month"><b>6/22</b><span>月</span></div>
+          <div class="time">18:45 開場<br>19:00 開演<br>20:00 終演</div>
+          <div class="venue">野方区民ホール</div>
+        </aside>
+      </section>
+
+      <div class="section-title">GUEST</div>
+      <section class="guests" aria-label="ゲスト出演者">
+        <article class="guest">
+          <h2>ヘンダーソン</h2>
+          <p>鋭いテンポで会場を一気に温める、東京ライブの強力ゲスト。</p>
+        </article>
+        <article class="guest">
+          <h2>カナメストーン</h2>
+          <p>マセキ芸能社から参戦。予測不能な熱量でフライヤーもはみ出す存在感。</p>
+        </article>
+      </section>
+
+      <section class="info" aria-label="公演情報">
+        <div class="info-card">
+          <div class="label">出演</div>
+          <div class="value">スーパーマラドーナ</div>
+        </div>
+        <div class="info-card">
+          <div class="label">ゲスト</div>
+          <div class="value">ヘンダーソン、カナメストーン（マセキ芸能社）</div>
+        </div>
+        <div class="info-card full">
+          <div class="label">料金</div>
+          <div class="value price">前売 2,500円 / 当日 3,000円</div>
+        </div>
+      </section>
+
+      <footer class="ticket-strip" aria-label="チケット情報">
+        <div class="ticket-logo">FANY Ticket</div>
+        <div>0570-550-100<br>https://ticket.fany.lol</div>
+        <div class="qr" aria-hidden="true"></div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
